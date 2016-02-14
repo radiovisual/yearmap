@@ -51,3 +51,9 @@ test('single months', t => {
 	t.is(fn('january, february, december').toString(), '1,1,0,0,0,0,0,0,0,0,0,1');
 	t.is(fn('january, february, march, april, may, june, july, august, september, october, november, december').toString(), '1,1,1,1,1,1,1,1,1,1,1,1');
 });
+
+test('allow any order for single months', t => {
+	t.is(fn('december, january').toString(), '1,0,0,0,0,0,0,0,0,0,0,1');
+	t.is(fn('december, november, october, january').toString(), '1,0,0,0,0,0,0,0,0,1,1,1');
+});
+
