@@ -75,12 +75,6 @@ Default: `1`
 
 The value you want to use when the month value is 'on'.
 
-### Known Limitations
-
-- Currently yearmap can accept **single-months** in __any order__, however, **ranges** need to be in order of earliest month first,
-so currently, you [can't overlap the year](https://github.com/radiovisual/yearmap/issues/1), like december of 2015 can't extend into january of 2016. 
-See [#1](https://github.com/radiovisual/yearmap/issues/1)
-
 ## License
 
 MIT © [Michael Wuergler](http://numetriclabs.com)
