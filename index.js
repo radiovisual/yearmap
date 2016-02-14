@@ -90,8 +90,20 @@ module.exports = function (input, opts) {
 		var beg = months.indexOf(reservedFrom);
 		var end = months.indexOf(reservedTo);
 
-		for (var i = beg; i <= end; i++) {
-			mappings[i].on = true;
+		// if the first month is before the last month
+		// or the beg and end are the same
+		if (beg < end || beg === end) {
+			for (var i = beg; i <= end; i++) {
+				mappings[i].on = true;
+			}
+		} else if (beg > end) {
+			// if the last month is before the first month
+			for (var j = beg; j <= 11; j++) {
+				mappings[j].on = true;
+			}
+			for (var k = 0; k <= end; k++) {
+				mappings[k].on = true;
+			}
 		}
 	});
 	// build the final yearmap object

@@ -63,3 +63,15 @@ test('allow any order for single months', t => {
 	t.is(fn('december, november, october, january').toString(), '1,0,0,0,0,0,0,0,0,1,1,1');
 });
 
+test('allow any order for ranges (overlap the year)', t => {
+	t.is(fn('december - january').toString(), '1,0,0,0,0,0,0,0,0,0,0,1');
+	t.is(fn('october - may').toString(), '1,1,1,1,1,0,0,0,0,1,1,1');
+	t.is(fn('october - may, june - july').toString(), '1,1,1,1,1,1,1,0,0,1,1,1');
+	t.is(fn('october - may, june - july, august').toString(), '1,1,1,1,1,1,1,1,0,1,1,1');
+	t.is(fn('september, october - may').toString(), '1,1,1,1,1,0,0,0,1,1,1,1');
+});
+
+test('allow duplicate coverage', t => {
+	t.is(fn('december - january, december, january').toString(), '1,0,0,0,0,0,0,0,0,0,0,1');
+	t.is(fn('january - march, january, february, march').toString(), '1,1,1,0,0,0,0,0,0,0,0,0');
+});
