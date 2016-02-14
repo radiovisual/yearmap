@@ -26,7 +26,15 @@
     "month",
     "calander",
     "12",
-    "twelve"
+    "twelve",
+    "convert",
+    "change",
+    "parse",
+    "evaluate",
+    "string",
+    "range",
+    "list",
+    "iterate"
   ],
   "dependencies": {
     "trim": "0.0.1"
