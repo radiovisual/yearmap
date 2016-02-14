@@ -7,6 +7,12 @@ test('expect a string', t => {
 	}, 'yearmap expects a string');
 });
 
+test('expect a non-empty string', t => {
+	t.throws(() => {
+		fn('      ');
+	}, 'yearmap expects a non-empty string');
+});
+
 test('returns an array', t => {
 	t.true(Array.isArray(fn('may - june')));
 });

@@ -11,6 +11,12 @@ module.exports = function (input, opts) {
 		throw new TypeError('yearmap expects a string');
 	}
 
+	input = trim(input);
+
+	if (input === '') {
+		throw new Error('yearmap expects a non-empty string');
+	}
+
 	// use this so that each month of the year has an index: jan === 0
 	var months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 
