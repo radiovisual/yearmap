@@ -21,10 +21,10 @@ const yearmap = require('yearmap');
 yearmap('may - september');
 //=> [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0);
 
-yearmap('january, february, december')
+yearmap('january, february, december');
 //=> [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1');
 
-yearmap('may - june, august - september')
+yearmap('may - june, august - september');
 //=> [0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0');
 ```
 
