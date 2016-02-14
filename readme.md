@@ -19,13 +19,13 @@ $ npm install --save yearmap
 const yearmap = require('yearmap');
 
 yearmap('may - september');
-//=> [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0);
+//=> [0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0];
 
 yearmap('january, february, december');
-//=> [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1');
+//=> [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
 
 yearmap('may - june, august - september');
-//=> [0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0');
+//=> [0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0];
 ```
 
 If your string contains the followings keyword: `year|annual` then yearmap prints out the full year automatically:
