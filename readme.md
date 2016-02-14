@@ -1,6 +1,6 @@
 # yearmap [![Build Status](https://travis-ci.org/radiovisual/yearmap.svg?branch=master)](https://travis-ci.org/radiovisual/yearmap)
 
-> Convert month ranges into a 12-month year map. `may - july` → `[0,0,0,0,0,1,1,1,0,0,0]`
+> Convert month ranges into a 12-month year map. `may - july` → `[0,0,0,0,1,1,1,0,0,0,0,0]`
 
 This module helps you take text-based month ranges, and convert them into parsable data arrays in the form of 12-month year maps.
 You can pass comma-delimited months and/or hyphenated month ranges. Hyphens are treated like a range, so yearmap reads
