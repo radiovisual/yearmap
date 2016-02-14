@@ -1,0 +1,38 @@
+{
+  "name": "yearmap",
+  "version": "0.0.0",
+  "description": "Turn hypenated or comma-delimited months into a twelve-month year map",
+  "license": "MIT",
+  "repository": "radiovisual/yearmap",
+  "author": {
+    "name": "Michael Wuergler",
+    "email": "wuergler@gmail.com",
+    "url": "numetriclabs.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "yearmap",
+    "year",
+    "map",
+    "months",
+    "month",
+    "calander",
+    "12",
+    "twelve"
+  ],
+  "dependencies": {
+    "trim": "0.0.1"
+  },
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "xo": "^0.12.1"
+  }
+}
