@@ -1,6 +1,6 @@
 {
   "name": "yearmap",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Turn hypenated or comma-delimited months into a twelve-month year map",
   "license": "MIT",
   "repository": "radiovisual/yearmap",
