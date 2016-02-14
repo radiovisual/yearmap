@@ -49,4 +49,5 @@ test('single months', t => {
 	t.is(fn('january').toString(), '1,0,0,0,0,0,0,0,0,0,0,0');
 	t.is(fn('january, late february').toString(), '1,late,0,0,0,0,0,0,0,0,0,0');
 	t.is(fn('january, february, december').toString(), '1,1,0,0,0,0,0,0,0,0,0,1');
+	t.is(fn('january, february, march, april, may, june, july, august, september, october, november, december').toString(), '1,1,1,1,1,1,1,1,1,1,1,1');
 });
