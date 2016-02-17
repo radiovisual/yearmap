@@ -1,7 +1,7 @@
 {
   "name": "yearmap",
-  "version": "0.0.4",
-  "description": "Convert month ranges into a 12-month year map. (may - july) → [0,0,0,0,1,1,1,0,0,0,0,0]",
+  "version": "0.0.5",
+  "description": "Convert month ranges into a 12-month year map. 'may - july' → [0,0,0,0,1,1,1,0,0,0,0,0]",
   "license": "MIT",
   "repository": "radiovisual/yearmap",
   "author": {
