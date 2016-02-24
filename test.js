@@ -45,6 +45,20 @@ test('allows custom markers', t => {
 	t.is(fn('may - june', {offMark: 'no', onMark: 'yes'}).toString(), 'no,no,no,no,yes,yes,no,no,no,no,no,no');
 });
 
+test('allows custom markers with modifiers', t => {
+	t.is(fn('mid feb -  early april', {offMark: 'no'}).toString(), 'no,mid,1,early,no,no,no,no,no,no,no,no');
+});
+
+test('allows custom markers with aliases', t => {
+	t.is(fn('year round', {on: 'yes'}).toString(), 'yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes');
+	t.is(fn('feb - april', {off: 'no'}).toString(), 'no,1,1,1,no,no,no,no,no,no,no,no');
+	t.is(fn('may - june', {off: 'no', on: 'yes'}).toString(), 'no,no,no,no,yes,yes,no,no,no,no,no,no');
+});
+
+test('prefer aliases', t => {
+	t.is(fn('may - june', {off: 'nay', on: 'yay', offMark: 'no', onMark: 'yes'}).toString(), 'nay,nay,nay,nay,yay,yay,nay,nay,nay,nay,nay,nay');
+});
+
 test('parses modifiers', t => {
 	t.is(fn('early january - late march').toString(), 'early,1,late,0,0,0,0,0,0,0,0,0');
 	t.is(fn('late may - early june, end september - mid december').toString(), '0,0,0,0,late,early,0,0,end,1,1,mid');

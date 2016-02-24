@@ -38,8 +38,8 @@ module.exports = function (input, opts) {
 	];
 
 	opts = opts || {};
-	opts.onMark = opts.onMark || 1;
-	opts.offMark = opts.offMark || 0;
+	opts.onMark = opts.on || opts.onMark || 1;
+	opts.offMark = opts.off || opts.offMark || 0;
 
 	var monthStrings = input.split(',');
 

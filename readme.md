@@ -25,6 +25,8 @@ yearmap('may - june, august - september');
 //=> [0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0];
 ```
 
+## Automatic Year
+
 If your string contains the keywords: `year` or `annual` then yearmap prints out the full year automatically:
 
 ```js
@@ -32,17 +34,21 @@ yearmap('year-round');
 //=> [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 ```
 
-You can also pass time modifiers like `early, late, mid, end` to the month ranges, and the modifiers will be printed to the yearmap:
+## Modifiers
+
+You can prepend the following modifiers to your months: `early`, `late`, `mid`, `end`. When modifiers are supplied, they are printed to the yearmap:
 
 ```js
 yearmap('late may - early june, end september - mid december');
 //=> [0, 0, 0, 0, 'late', 'early', 0, 0, 'end', 1, 1, 'mid'];
 ```
 
-Optionally, you can change the way yearmap marks the 'on months' and 'off months':
+## Custom Output
+
+The default is a binary-style yearmap, but you can change the way yearmap marks the 'on months' and 'off months' to customize your yearmap:
 
 ```js
-yearmap('december - february, may, june', {onMark:'yup', offMark: 'nope'});
+yearmap('december - february, may, june', {on:'yup', off: 'nope'});
 //=> ['yup', 'yup', 'nope', 'nope', 'yup', 'yup', 'nope', 'nope', 'nope', 'nope', 'nope', 'nope']
 ```
 
@@ -71,6 +77,20 @@ Type: `string|number`<br>
 Default: `1`
 
 The value you want to use when the month value is 'on'.
+
+##### on
+
+Type: `string|number`<br>
+Default: `1`
+
+Alias for `onMark`
+
+##### off
+
+Type: `string|number`<br>
+Default: `0`
+
+Alias for `offMark`
 
 ## License
 
